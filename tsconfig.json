@@ -1,0 +1,1 @@
+{"compilerOptions":{"esModuleInterop":true,"forceConsistentCasingInFileNames":true,"module":"Node16","moduleResolution":"node16","outDir":"build","rootDir":".","skipLibCheck":true,"strict":true,"target":"es2022"},"exclude":["node_modules"],"include":["lib/**/*.ts","server/**/*.ts","tests/**/*.ts"]}

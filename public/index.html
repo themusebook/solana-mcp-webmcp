@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solana MCP — WebMCP Era</title>
+    <meta
+      name="description"
+      content="A Solana MCP server with a built-in AI gateway, MCP Apps UI, WebMCP tools on this page, Neon Auth, and S3 storage."
+    />
+    <style>
+      body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; margin: 0; padding: 48px 24px; max-width: 760px; margin-inline: auto; line-height: 1.55; }
+      code { background: rgba(128,128,128,.18); padding: 2px 6px; border-radius: 6px; }
+      h1 { margin-bottom: 4px; }
+      .sub { opacity: .7; margin-top: 0; }
+      li { margin: 6px 0; }
+    </style>
+  </head>
+  <body>
+    <h1>Solana MCP, WebMCP era</h1>
+    <p class="sub">Docs intelligence, a built-in AI gateway, interactive UI, and storage — one MCP server, one deployment.</p>
+    <h2>Connect</h2>
+    <p>MCP endpoint: <code>/mcp</code> (Streamable HTTP). Try it with the MCP Inspector:</p>
+    <p><code>npx -y @modelcontextprotocol/inspector npx mcp-remote http://localhost:8080/mcp</code></p>
+    <h2>What's inside</h2>
+    <ul>
+      <li><strong>AI gateway in the server</strong> — <code>solana_ask</code> and <code>ai_models</code> run on the Neon AI Gateway; no client-side model key.</li>
+      <li><strong>MCP Apps UI</strong> — <code>render_docs_explorer</code> renders results in a <code>ui://</code> widget.</li>
+      <li><strong>WebMCP</strong> — this page registers the server's tools with <code>navigator.modelContext</code> for browser agents (see <code>/webmcp.js</code>).</li>
+      <li><strong>Auth</strong> — Neon Auth JWTs verified against the published JWKS; <code>whoami</code> is the profile tool, protected-resource metadata lives at <code>/.well-known/oauth-protected-resource</code>.</li>
+      <li><strong>Storage</strong> — S3-compatible object storage with presigned URLs.</li>
+    </ul>
+    <script src="/webmcp.js" defer></script>
+  </body>
+</html>
